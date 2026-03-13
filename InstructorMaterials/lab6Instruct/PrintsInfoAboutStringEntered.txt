@@ -1,0 +1,43 @@
+// prints information about a string entered
+// mikhail nesterenko (out of deitel&deitel)
+// 3/7/00
+
+#include <iostream>
+#include <string>
+
+using std::cout; using std::cin; using std::endl;
+using std::string;
+
+// prints statistics of staring
+void print_stats(const string &);
+
+int main(){
+
+   string s;        // string to measure the parameters of
+   string quit="y"; // quit after this comparison?
+
+   do{
+      cout << "Enter string and hit return: ";
+      getline(cin, s);
+      print_stats(s);
+
+      cout << "done? ";
+      getline (cin,quit);
+
+   }while (quit!="y");
+
+}
+
+// prints statistics of staring
+void print_stats(const string &str){
+    cout << "the stats for the string are: \n";
+    cout << "\tmax size: " << str.max_size() << endl
+	 << "\tsize: " << str.size() << endl
+	 << "\tlength: " << str.length() << endl;
+
+    cout << "\tempty: ";
+    if (str.empty())
+	cout << "yes\n";
+    else
+	cout << "no\n";
+}

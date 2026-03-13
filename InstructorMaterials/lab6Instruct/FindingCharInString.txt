@@ -1,0 +1,57 @@
+// demonstrates finding characters in string
+// mikhail nesterenko
+// 03/07/99
+
+#include <string>
+#include <iostream>
+using std::cout; using std::endl; using std::cin; using std::string;
+
+void printresult (int); // printing result of search
+
+int main(){
+
+  string quit="y";     // quit after this loop?
+
+  do{
+
+    cout << "Enter string to search: ";
+    string tosearch;
+    cin >> tosearch;
+
+    cout << "Enter string to find: ";
+    string tofind;
+    cin >> tofind;
+
+    cout << "find ";
+    printresult(tosearch.find(tofind));
+ 
+    cout << "rfind ";
+    printresult(tosearch.rfind(tofind));
+
+    cout << "find_first_of ";
+    printresult(tosearch.find_first_of(tofind));
+
+    cout << "find_last_of ";
+    printresult(tosearch.find_last_of(tofind));
+
+    cout << "find_first_not_of ";
+    printresult(tosearch.find_first_not_of(tofind));
+
+    cout << "find_last_not_of ";
+    printresult(tosearch.find_last_not_of(tofind));
+
+    cout << "done? ";
+    cin >> quit;
+
+  }while(quit !="y");
+
+}
+
+
+void printresult (int result){
+
+  if(result != string::npos)
+    cout << "found at position " << result << endl;
+  else
+    cout << "not found" << endl;
+}

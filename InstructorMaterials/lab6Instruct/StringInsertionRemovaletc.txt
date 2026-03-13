@@ -1,0 +1,27 @@
+// illustrates string insertion/removal/appending/erasing functions
+// Mikhail Nesterenko
+// 2/19/2012
+
+#include <iostream>
+#include <string>
+using std::cout; using std::endl; using std::string;
+
+int main(){
+
+  string s1 = "Hello",
+    s2 = "World";
+
+
+  s1.append(s2);  // "HelloWorld"
+  s1.append("!"); // "HelloWorld!"
+
+  int insertPoint = s1.find(s2);  // insertPoint == 5
+  s1.insert(insertPoint,5,' ');   // "Hello     World!"
+  s1.insert(insertPoint,",");     // "Hello,     World!"
+
+  s1.erase(insertPoint+1,4);      // "Hello, World!"
+
+  s1.replace(1,4,"owdy");         // "Howdy, World!"
+  cout << s1 << endl;
+
+}

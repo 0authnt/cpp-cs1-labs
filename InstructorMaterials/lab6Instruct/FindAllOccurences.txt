@@ -1,0 +1,18 @@
+// finding all occurences, demoes starting find mid-string
+// mikhail nesterenko
+// 10/30/2015
+
+#include <string>
+#include <iostream>
+using std::cout; using std::endl; using std::cin; using std::string;
+
+
+int main(){
+
+   string s= "baa baa black sheep";
+   int pos=s.find('a');
+   while (pos != string::npos){
+      cout << "found a at " << pos << endl;
+      pos=s.find('a', pos+1);
+   }
+}

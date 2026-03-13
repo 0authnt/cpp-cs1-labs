@@ -1,0 +1,15 @@
+*.exe
+*.o
+*.obj
+*.log
+*.ilk
+*.pdb
+*.vcxproj
+*.vcxproj.filters
+*.user
+.vs/
+.vscode/
+Debug/
+Release/
+x64/
+build/
