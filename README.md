@@ -42,8 +42,6 @@ These labs were completed as part of academic coursework.
 
 **Credit for the original assignment design, course structure, and instructional materials belongs to the school, professor(s), and teaching staff who created the coursework.**
 
-Before publishing publicly, update the section below with your actual course information:
-
 - **School:** Kent State University
 - **Course:** CS 13011/13012
 
